@@ -2,14 +2,7 @@
 class Barn extends Farm
 {
   public $burn_animal = [];
-  function get_animals_on_barn()
-  {
-    echo 'Животные и их кол-во: ' . PHP_EOL;
-    foreach ($this->animals as $key => $value)
-  {
-    echo $key . ' ' . $value . PHP_EOL;
-  }
-  }
+
 
   function add_animal($animal_name, $amount_animal, 
   $product_name, $amount_product)

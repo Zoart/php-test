@@ -1,13 +1,13 @@
 <?php
 class Farm
 {
-  public $animals_and_products = [];
-  public $animals = [
+  protected $animals_and_products = [];
+  protected $animals = [
   ];
-  public $products = [
+  protected $products = [
   ];
 
-  public $have_products = [];
+  protected $have_products = [];
 
   function get_day_product($days)
   {
@@ -39,6 +39,15 @@ class Farm
   function get_product()
   {
     var_dump($this->products);
+  }
+
+  function get_animals()
+  {
+    echo 'Животные и их кол-во: ' . PHP_EOL;
+    foreach ($this->animals as $key => $value)
+  {
+    echo $key . ' ' . $value . PHP_EOL;
+  }
   }
 }
 
